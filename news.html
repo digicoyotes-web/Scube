@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates - SCUBE Industries</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #1449b4;
+            --dark-blue: #0b1836;
+            --light-bg: #f8f9fa;
+        }
+
+        body { font-family: 'Inter', sans-serif; background-color: white; color: #444; }
+
+        /* Navbar Match */
+        .navbar { padding: 15px 0; border-bottom: 1px solid #eee; }
+        .nav-link { font-weight: 600; color: #555 !important; font-size: 0.85rem; margin: 0 10px; }
+        .nav-link.active { color: var(--primary-blue) !important; background: #eef2ff; border-radius: 5px; }
+
+        /* Header Section */
+        .news-header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .news-header h1 { font-weight: 700; font-size: 2.2rem; margin: 0; }
+        .news-header p { opacity: 0.8; font-size: 0.9rem; margin-top: 10px; }
+
+        /* News Grid Section */
+        .section-padding { padding: 80px 0; }
+
+        .news-card {
+            border: 1px solid #eef0f2;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .news-img-wrapper {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .news-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .news-card:hover .news-img {
+            transform: scale(1.05);
+        }
+
+        .category-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary-blue);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .news-body {
+            padding: 25px;
+        }
+        .news-date {
+            font-size: 0.75rem;
+            color: #999;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .news-body h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        .news-body p {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .read-more {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+        }
+        .read-more i {
+            margin-left: 8px;
+            font-size: 0.7rem;
+            transition: transform 0.2s;
+        }
+        .read-more:hover i {
+            transform: translateX(3px);
+        }
+
+       footer {
+            background-color: var(--dark-blue);
+            color: #a0aaba;
+            padding: 70px 0 20px;
+        }
+        .footer-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+            text-decoration: none;
+        }
+        .footer-heading {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: #a0aaba;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: white;
+        }
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .contact-info i {
+            margin-top: 5px;
+            margin-right: 15px;
+            color: var(--primary-blue);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 50px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">SCUBE <span class="d-block fw-light text-secondary" style="font-size: 0.7rem;">INDUSTRIES</span></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link " href="news.html">News & Updates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="news-header">
+        <div class="container">
+            <h1>News & Updates</h1>
+            <p>Stay updated with the latest happenings at SCUBE Industries.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-6">
+                    <div class="news-card">
+                        <div class="news-img-wrapper">
+                            <span class="category-tag">Products</span>
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" class="news-img" alt="Product Launch">
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date"><i class="fa-regular fa-calendar me-2"></i>March 15, 2026</span>
+                            <h4>New Product Launches</h4>
+                            <p>SCUBE Industries announces the launch of our new line of high-precision CNC machined components designed for extreme environments.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="news-card">
+                        <div class="news-img-wrapper">
+                            <span class="category-tag">Compliance</span>
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80" class="news-img" alt="Certifications">
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date"><i class="fa-regular fa-calendar me-2"></i>February 28, 2026</span>
+                            <h4>Industry Certifications & Compliance Updates</h4>
+                            <p>We are proud to announce that our manufacturing facility has successfully renewed its ISO certifications, reaffirming our commitment to quality.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="news-card">
+                        <div class="news-img-wrapper">
+                            <span class="category-tag">Events</span>
+                            <img src="https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?auto=format&fit=crop&q=80" class="news-img" alt="Exhibition">
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date"><i class="fa-regular fa-calendar me-2"></i>January 10, 2026</span>
+                            <h4>Participation in Oil & Gas Exhibitions</h4>
+                            <p>Join us at the upcoming International Oil & Gas Expo where we will be showcasing our latest innovations in precision engineering.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="news-card">
+                        <div class="news-img-wrapper">
+                            <span class="category-tag">Technology</span>
+                            <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80" class="news-img" alt="Upgrades">
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date"><i class="fa-regular fa-calendar me-2"></i>December 05, 2025</span>
+                            <h4>Technology Upgrades & Innovations</h4>
+                            <p>SCUBE Industries invests in state-of-the-art heavy-duty CNC machines to enhance production capabilities and reduce lead times.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+             <div class="row g-4">
+                <div class="col-lg-4 pe-lg-5">
+                    <a href="#" class="footer-brand">SCUBE<br><span style="font-size: 0.9rem; font-weight:400;">INDUSTRIES</span></a>
+                    <p>Professionally managed company specializing in the manufacturing and servicing of oil & gas equipment and precision engineering components.</p>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-heading">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Oil & Gas Equipment</a></li>
+                        <li><a href="#">Manufacturing Services</a></li>
+                        <li><a href="#">Engineering Support</a></li>
+                        <li><a href="#">Quality & Inspections</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <ul class="footer-links contact-info">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>ATC-65, T.T.C MIDC AREA, MAHAPE,NAVI MUMBAI-400710</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>sales@scubeindustries.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row footer-bottom align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    &copy; 2026 SCUBE Industries. All rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

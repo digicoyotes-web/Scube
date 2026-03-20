@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - SCUBE Industries</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #1449b4;
+            --dark-blue: #0b1836;
+            --bg-light: #f8f9fa;
+        }
+
+        body { font-family: 'Inter', sans-serif; background-color: white; }
+
+        /* Navbar Match */
+        .navbar { padding: 15px 0; border-bottom: 1px solid #eee; }
+        .nav-link { font-weight: 600; color: #555 !important; font-size: 0.85rem; margin: 0 10px; }
+        .nav-link.active { color: var(--primary-blue) !important; background: #eef2ff; border-radius: 5px; }
+
+        /* Services Header Section */
+        .services-header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 70px 0;
+            text-align: center;
+        }
+        .services-header h1 { font-weight: 700; font-size: 2.2rem; }
+        .services-header p { opacity: 0.8; font-size: 0.9rem; max-width: 650px; margin: 15px auto 0; }
+
+        /* Service Grid Section */
+        .section-padding { padding: 80px 0; background-color: white; }
+        
+        .service-card {
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            padding: 40px;
+            height: 100%;
+            transition: 0.3s ease;
+            background: #fff;
+        }
+        .service-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-color: var(--primary-blue);
+        }
+
+        .service-icon-box {
+            width: 45px;
+            height: 45px;
+            background-color: #f0f4ff;
+            color: var(--primary-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .service-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .service-list li {
+            font-size: 0.8rem;
+            color: #555;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .service-list li::before {
+            content: "•";
+            color: var(--primary-blue);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: 0;
+        }
+ footer {
+            background-color: var(--dark-blue);
+            color: #a0aaba;
+            padding: 70px 0 20px;
+        }
+        .footer-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+            text-decoration: none;
+        }
+        .footer-heading {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: #a0aaba;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: white;
+        }
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .contact-info i {
+            margin-top: 5px;
+            margin-right: 15px;
+            color: var(--primary-blue);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 50px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">SCUBE <span class="d-block fw-light text-secondary" style="font-size: 0.7rem;">INDUSTRIES</span></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News & Updates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="services-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>We provide end-to-end manufacturing and engineering support tailored to meet the demanding requirements of the energy sector.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon-box"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h4>Quality & Inspection</h4>
+                        <p>Ensuring every product meets international standards through rigorous testing and inspection.</p>
+                        <ul class="service-list">
+                            <li>Material Test Certificates (MTC/MTR)</li>
+                            <li>Dimensional & Hardness testing</li>
+                            <li>Third-party inspection (TPI)</li>
+                            <li>Compliance with ASTM, ASME, API standards</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon-box"><i class="fa-solid fa-gears"></i></div>
+                        <h4>Manufacturing Services</h4>
+                        <p>Advanced machining and fabrication processes for precision-engineered components.</p>
+                        <ul class="service-list">
+                            <li>CNC turning & milling</li>
+                            <li>Drilling, threading, boring</li>
+                            <li>Heat treatment</li>
+                            <li>Surface finishing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon-box"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h4>Engineering Support</h4>
+                        <p>Comprehensive engineering and technical support services.</p>
+                        <ul class="service-list">
+                            <li>Design assistance</li>
+                            <li>Material selection</li>
+                            <li>Cost optimization</li>
+                            <li>Documentation support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon-box"><i class="fa-solid fa-truck-fast"></i></div>
+                        <h4>Supply & After-Sales</h4>
+                        <p>Reliable supply chain management and dedicated after-sales support.</p>
+                        <ul class="service-list">
+                            <li>On-time delivery</li>
+                            <li>Export packaging</li>
+                            <li>Technical support</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  <footer>
+        <div class="container">
+             <div class="row g-4">
+                <div class="col-lg-4 pe-lg-5">
+                    <a href="#" class="footer-brand">SCUBE<br><span style="font-size: 0.9rem; font-weight:400;">INDUSTRIES</span></a>
+                    <p>Professionally managed company specializing in the manufacturing and servicing of oil & gas equipment and precision engineering components.</p>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-heading">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Oil & Gas Equipment</a></li>
+                        <li><a href="#">Manufacturing Services</a></li>
+                        <li><a href="#">Engineering Support</a></li>
+                        <li><a href="#">Quality & Inspections</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <ul class="footer-links contact-info">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>ATC-65, T.T.C MIDC AREA, MAHAPE,NAVI MUMBAI-400710</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>sales@scubeindustries.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row footer-bottom align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    &copy; 2026 SCUBE Industries. All rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
