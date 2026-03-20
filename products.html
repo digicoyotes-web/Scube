@@ -18,71 +18,79 @@
 
         body { font-family: 'Inter', sans-serif; background-color: white; color: #444; }
 
-        /* Navbar Match */
-        .navbar { padding: 15px 0; border-bottom: 1px solid #eee; }
-        .nav-link { font-weight: 600; color: #555 !important; font-size: 0.9rem; margin: 0 10px; }
+        /* Navbar Consistency */
+        .navbar { padding: 10px 0; border-bottom: 1px solid #eee; background: white; }
+        .navbar-brand img { height: 60px; width: auto; }
+        .nav-link { font-weight: 600; color: #555 !important; font-size: 0.85rem; margin: 0 10px; }
+        .nav-link:hover { color: var(--primary-blue) !important; }
         .nav-link.active { color: var(--primary-blue) !important; background: #eef2ff; border-radius: 5px; }
 
         /* Products Header */
         .products-header {
             background-color: var(--primary-blue);
             color: white;
-            padding: 60px 0;
+            padding: 70px 0;
             text-align: center;
         }
-        .products-header h1 { font-weight: 700; font-size: 2.2rem; }
-        .products-header p { opacity: 0.8; font-size: 0.9rem; max-width: 600px; margin: 10px auto 0; }
+        .products-header h1 { font-weight: 700; font-size: 2.2rem; margin: 0; }
+        .products-header p { opacity: 0.8; font-size: 0.9rem; max-width: 650px; margin: 15px auto 0; line-height: 1.6; }
 
         /* Product Grid */
         .section-padding { padding: 80px 0; }
         
         .product-card {
-            border: 1px solid #e0e0e0;
+            border: 1px solid #eef0f2;
             border-radius: 12px;
             overflow: hidden;
             height: 100%;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             background: #fff;
         }
         .product-card:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transform: translateY(-8px);
         }
 
         .img-wrapper {
             position: relative;
-            height: 200px;
+            height: 240px;
             overflow: hidden;
         }
         .product-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.6s ease;
         }
+        .product-card:hover .product-img {
+            transform: scale(1.1);
+        }
+
         .category-icon {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 35px;
-            height: 35px;
-            background: white;
-            color: var(--primary-blue);
-            border-radius: 8px;
+            bottom: -20px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-size: 1.3rem;
+            box-shadow: 0 8px 15px rgba(20, 73, 180, 0.3);
+            z-index: 2;
         }
 
         .product-body {
-            padding: 25px;
+            padding: 40px 25px 30px;
         }
         .product-body h4 {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: #222;
-            margin-bottom: 15px;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
         }
         .product-list {
             list-style: none;
@@ -90,83 +98,50 @@
             margin: 0;
         }
         .product-list li {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #666;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-        .product-list li::before {
-            content: "•";
-            color: var(--primary-blue);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-          footer {
-            background-color: var(--dark-blue);
-            color: #a0aaba;
-            padding: 70px 0 20px;
-        }
-        .footer-brand {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            display: block;
-            text-decoration: none;
-        }
-        .footer-heading {
-            color: white;
-            font-weight: 600;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        .footer-links a {
-            color: #a0aaba;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .footer-links a:hover {
-            color: white;
-        }
-        .contact-info li {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: flex;
             align-items: flex-start;
+            line-height: 1.4;
         }
-        .contact-info i {
-            margin-top: 5px;
-            margin-right: 15px;
+        .product-list li i {
             color: var(--primary-blue);
+            font-size: 0.7rem;
+            margin-top: 5px;
+            margin-right: 12px;
         }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            margin-top: 50px;
-            font-size: 0.85rem;
-        }
+
+        /* Footer */
+        footer { background-color: var(--dark-blue); color: #a0aaba; padding: 70px 0 20px; }
+        .footer-brand img { height: 50px; filter: brightness(0) invert(1); margin-bottom: 20px; }
+        .footer-heading { color: white; font-weight: 600; margin-bottom: 20px; font-size: 1.1rem; }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: #a0aaba; text-decoration: none; transition: 0.3s; }
+        .footer-links a:hover { color: white; }
+        .contact-info li { margin-bottom: 15px; display: flex; align-items: flex-start; }
+        .contact-info i { margin-top: 5px; margin-right: 15px; color: var(--primary-blue); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 50px; font-size: 0.85rem; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">SCUBE <span class="d-block fw-light text-secondary" style="font-size: 0.7rem;">INDUSTRIES</span></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="https://img.sanishtech.com/u/7f4c1549b3e83ca2c8175c4757953d21.jpeg" alt="SCUBE Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link " href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                     <li class="nav-item"><a class="nav-link" href="news.html">News & Updates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News & Updates</a></li>
                     <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
                 </ul>
@@ -176,80 +151,78 @@
 
     <header class="products-header">
         <div class="container">
-            <h1>Our Products</h1>
-            <p>We manufacture high-quality components adhering to international standards and client specifications.</p>
+            <h1>Manufacturing Portfolio</h1>
+            <p>From precision micro-components to heavy-duty Oil & Gas assemblies, we deliver engineering solutions that exceed international quality benchmarks.</p>
         </div>
     </header>
 
     <section class="section-padding">
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-5">
                 
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="product-card">
                         <div class="img-wrapper">
                             <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80" class="product-img" alt="Machined Parts">
-                            <div class="category-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="category-icon"><i class="fa-solid fa-compass-drafting"></i></div>
                         </div>
                         <div class="product-body">
                             <h4>Precision Machined Parts</h4>
                             <ul class="product-list">
-                                <li>CNC machined components</li>
-                                <li>Highly precise tolerance levels</li>
-                                <li>Custom engineering parts</li>
-                                <li>High pressure & high temperature components</li>
+                                <li><i class="fa-solid fa-circle"></i> High-precision CNC & VMC turned components.</li>
+                                <li><i class="fa-solid fa-circle"></i> Specialized parts for HPHT (High Pressure High Temperature) applications.</li>
+                                <li><i class="fa-solid fa-circle"></i> Custom engineered components with micron-level tolerances.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="product-card">
                         <div class="img-wrapper">
                             <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80" class="product-img" alt="Oil & Gas">
-                            <div class="category-icon"><i class="fa-solid fa-oil-can"></i></div>
+                            <div class="category-icon"><i class="fa-solid fa-oil-well"></i></div>
                         </div>
                         <div class="product-body">
                             <h4>Oil & Gas Equipment</h4>
                             <ul class="product-list">
-                                <li>Pressure Vessels</li>
-                                <li>API / ASME Specification equipment</li>
-                                <li>Wellhead & Christmas Tree components</li>
-                                <li>In-house Hydro Testing facilities</li>
+                                <li><i class="fa-solid fa-circle"></i> API Spec Pressure Vessels and Heat Exchangers.</li>
+                                <li><i class="fa-solid fa-circle"></i> Wellhead, Christmas Tree, and Subsea components.</li>
+                                <li><i class="fa-solid fa-circle"></i> Manifolds and high-pressure flow control equipment.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="product-card">
                         <div class="img-wrapper">
                             <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80" class="product-img" alt="Fabrication">
-                            <div class="category-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                            <div class="category-icon"><i class="fa-solid fa-industry"></i></div>
                         </div>
                         <div class="product-body">
-                            <h4>Fabrication Products</h4>
+                            <h4>Industrial Fabrication</h4>
                             <ul class="product-list">
-                                <li>Structural steel work</li>
-                                <li>Skid-mounted assemblies</li>
-                                <li>Welded and coated structures</li>
+                                <li><i class="fa-solid fa-circle"></i> Heavy structural steel fabrication and skid-mounted units.</li>
+                                <li><i class="fa-solid fa-circle"></i> Certified welding processes (ASME Section IX).</li>
+                                <li><i class="fa-solid fa-circle"></i> Specialized coating and surface treatment for corrosive environments.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="product-card">
                         <div class="img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" class="product-img" alt="Industrial">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" class="product-img" alt="Components">
                             <div class="category-icon"><i class="fa-solid fa-gears"></i></div>
                         </div>
                         <div class="product-body">
-                            <h4>Industrial Components</h4>
+                            <h4>Specialized Components</h4>
                             <ul class="product-list">
-                                <li>Turbine and Motor components</li>
-                                <li>Power Generation parts</li>
-                                <li>Forging and casting solutions</li>
+                                <li><i class="fa-solid fa-circle"></i> Turbine blades and motor housing components.</li>
+                                <li><i class="fa-solid fa-circle"></i> Critical parts for Power Generation and Aerospace.</li>
+                                <li><i class="fa-solid fa-circle"></i> Forging and casting finishing services.</li>
                             </ul>
                         </div>
                     </div>
@@ -259,64 +232,38 @@
         </div>
     </section>
 
-     <footer>
+    <footer>
         <div class="container">
-             <div class="row g-4">
-                <div class="col-lg-4 pe-lg-5">
-                    <a href="#" class="footer-brand">SCUBE<br><span style="font-size: 0.9rem; font-weight:400;">INDUSTRIES</span></a>
-                    <p>Professionally managed company specializing in the manufacturing and servicing of oil & gas equipment and precision engineering components.</p>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand">
+                        <img src="https://img.sanishtech.com/u/7f4c1549b3e83ca2c8175c4757953d21.jpeg" alt="SCUBE Logo">
+                    </a>
+                    <p>Manufacturing and servicing global energy sectors through precision engineering.</p>
                 </div>
-                
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="footer-heading">Quick Links</h5>
+                <div class="col-lg-2 ms-auto">
+                    <h5 class="footer-heading">Links</h5>
                     <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
                     </ul>
                 </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <h5 class="footer-heading">Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Oil & Gas Equipment</a></li>
-                        <li><a href="#">Manufacturing Services</a></li>
-                        <li><a href="#">Engineering Support</a></li>
-                        <li><a href="#">Quality & Inspections</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <h5 class="footer-heading">Contact Us</h5>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">Contact</h5>
                     <ul class="footer-links contact-info">
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>ATC-65, T.T.C MIDC AREA, MAHAPE,NAVI MUMBAI-400710</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>sales@scubeindustries.com</span>
-                        </li>
+                        <li><i class="fa-solid fa-location-dot"></i> ATC-65, T.T.C MIDC AREA, NAVI MUMBAI</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fa-solid fa-envelope"></i> sales@scubeindustries.com</li>
                     </ul>
                 </div>
             </div>
-
-            <div class="row footer-bottom align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    &copy; 2026 SCUBE Industries. All rights reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
-                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
-                </div>
+            <div class="footer-bottom text-center">
+                &copy; 2026 SCUBE Industries. All rights reserved.
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
